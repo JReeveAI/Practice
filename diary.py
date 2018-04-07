@@ -41,7 +41,7 @@ def userinput():
                 print(append)
                 save = input("Save entry? Y/N: " )
                 if save.lower() == 'y':
-                    calender[entry_date] = ammend 
+                    calender[entry_date] = append 
                 else:
                     return ("Cancelled")
             else:
