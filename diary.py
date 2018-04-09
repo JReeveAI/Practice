@@ -8,10 +8,9 @@ calender = np.load('diary.npy').item()
 
 welcome = input("Enter name: ")
 
-
 def userinput(): 
 
-    action = input("What would you like to do %s? \n A: Add entry \n B: Append entry \n C: Delete entry \n D: View entry \n E: Exit \n Please enter: "  % (welcome))
+    action = input("What would you like to do %s? \n A: Add entry \n B: Append entry \n C: Delete entry \n D: View entry \n E: View all entries \n D: Exit \n Please enter: "  % (welcome))
 
     if action.lower() == "a":
         entry_date = input("Please enter date you would like to create entry to. \n Date should be entered in the following format 'dd/mm/yyyy' \n " )
@@ -26,7 +25,6 @@ def userinput():
                 calender[entry_date] = new_entry
             else:
                 return ("Cancelled")
-
 
     elif action.lower() == "b":
         entry_date = input("Please enter date you would like to append. \n Date should be entered in the following format 'dd/mm/yyyy' \n " )
@@ -73,6 +71,9 @@ def userinput():
                 print(calender[entry_date])
 
     elif action.lower() == 'e':
+        print (calender)
+        
+    elif action.lower() == 'f':
             return                 
 
     else:
